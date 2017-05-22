@@ -14,7 +14,10 @@
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate{
+    
+    
+}
 
 -(void)dosomething{
     

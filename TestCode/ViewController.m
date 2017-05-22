@@ -18,6 +18,20 @@
 
 #import "ViewController.h"
 
+#import "MLAdjustAmountView.h"
+
+@interface Person2 : NSObject
+
+@property (nonatomic,copy) NSString *name;
+
+@end
+
+@implementation Person2
+
+
+
+@end
+
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,MLPaymentDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
@@ -25,7 +39,14 @@
 @property (nonatomic,strong) MLCurrencyTextField *currentTextField;
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    
+    NSString *_name;
+    
+    Person2 * _Person2;
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,6 +75,25 @@
     UIView *orange = [[UIView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
     orange.backgroundColor = [UIColor orangeColor];
    // [[UIApplication sharedApplication].keyWindow addSubview:orange];
+    
+    NSString *str = @"caijie";
+    
+    _name = str;
+    
+    Person2 *temp = [[Person2 alloc] init];
+    temp.name = @"123";
+    _Person2 = temp;
+    
+    NSLog(@"====%@====%@",_name,_Person2.name);
+    
+    str = nil;
+    temp.name = @"224345";
+    NSLog(@"====%@====%@",_name,_Person2.name);
+
+    
+    temp = nil;
+    NSLog(@"====%@====%@",_name,_Person2.name);
+
    
 }
 //
@@ -147,13 +187,26 @@
 //    
 //    [self.navigationController pushViewController:v animated:YES];
     
-    MLPaymentView *payment = [[MLPaymentView alloc] init];
-    payment.backgroundColor = [UIColor greenColor];
-    payment.delegate = self;
+//    MLPaymentView *payment = [[MLPaymentView alloc] init];
+//    payment.backgroundColor = [UIColor greenColor];
+//    payment.delegate = self;
+//    
+//    [payment  showInView:self.view];
+//    
+//    [payment reloadPaymentViewWithAmount:@"17.68" bankCardInfo:nil];
     
-    [payment  showInView:self.view];
     
-    [payment reloadPaymentViewWithAmount:@"17.68" bankCardInfo:nil];
+    MLAdjustAmountView *adjuest = [[MLAdjustAmountView alloc] init];
+    adjuest.toNumber = 1000;
+    adjuest.closeCallBack = ^{
+        
+        NSLog(@"我关闭了%@",_name);
+    };
+    adjuest.lookupAmountCallBack = ^{
+        
+        NSLog(@"我关闭了%@",_name);
+    };
+    [adjuest showInView:self.view];
 }
 
 

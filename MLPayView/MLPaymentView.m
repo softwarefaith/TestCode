@@ -215,7 +215,14 @@ const CGFloat  KAlertHeight = 325;
     [self.payBankCardView.dataSource addObject:model1];
 
     
+    
     [self.payAlertView.infoTableView reloadData];
+    
+}
+
+-(void)name{
+
+    
 }
 
 -(void)addBankCardInfo:(id)param{
