@@ -7,23 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MLMaskBlurView.h"
 
-@interface MLAdjustAmountView : UIView
+@interface MLAdjustAmountView : MLMaskBlurView
 
 @property (nonatomic,assign) CGFloat toNumber;
-
-/**
- 视图显示
- */
-
-- (void)showInKeyWindow;
-
-- (void)showInView:(UIView *_Nonnull )superView;
-
 
 @property (nonatomic,copy) dispatch_block_t _Nullable closeCallBack;
 
 @property (nonatomic,copy) dispatch_block_t _Nullable lookupAmountCallBack;
-
 
 @end

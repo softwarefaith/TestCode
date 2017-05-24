@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E3FDA981ED5643E000B275A /* MLMaskBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3FDA971ED5643E000B275A /* MLMaskBlurView.m */; };
 		2E4F2ECD1EA9F65900BE795F /* MLCurrencyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E4F2ECC1EA9F65900BE795F /* MLCurrencyTextField.m */; };
 		2EC6EC001ED27E4700994164 /* MLAutoChangeEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6EBFD1ED27E4700994164 /* MLAutoChangeEngine.m */; };
 		2EC6EC061ED27F8200994164 /* MLAdjustAmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC6EC051ED27F8200994164 /* MLAdjustAmountView.m */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E3FDA961ED5643E000B275A /* MLMaskBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLMaskBlurView.h; path = "调额/MLMaskBlurView.h"; sourceTree = "<group>"; };
+		2E3FDA971ED5643E000B275A /* MLMaskBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLMaskBlurView.m; path = "调额/MLMaskBlurView.m"; sourceTree = "<group>"; };
 		2E4F2ECB1EA9F65900BE795F /* MLCurrencyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCurrencyTextField.h; sourceTree = "<group>"; };
 		2E4F2ECC1EA9F65900BE795F /* MLCurrencyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCurrencyTextField.m; sourceTree = "<group>"; };
 		2EC6EBFC1ED27E4700994164 /* MLAutoChangeEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAutoChangeEngine.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				2EC6EC171ED2DB3700994164 /* MLAutoChangeLabel.m */,
 				2EC6EC041ED27F8200994164 /* MLAdjustAmountView.h */,
 				2EC6EC051ED27F8200994164 /* MLAdjustAmountView.m */,
+				2E3FDA961ED5643E000B275A /* MLMaskBlurView.h */,
+				2E3FDA971ED5643E000B275A /* MLMaskBlurView.m */,
 			);
 			name = "调额Demo";
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				2EE054591EC1875500E498FF /* MLCardInfo.m in Sources */,
 				2EF5D87B1EA6240100831A70 /* A.m in Sources */,
 				2E4F2ECD1EA9F65900BE795F /* MLCurrencyTextField.m in Sources */,
+				2E3FDA981ED5643E000B275A /* MLMaskBlurView.m in Sources */,
 				2EE6E1D91EC32CD5004D0D3E /* MLCountdownButton.m in Sources */,
 				2EC6EC091ED286FC00994164 /* MLPublic.m in Sources */,
 				2EE0545F1EC193D500E498FF /* MLPayAlertView.m in Sources */,

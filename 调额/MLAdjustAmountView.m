@@ -39,24 +39,11 @@
     NSLog(@"MLAdjustAmountView我消失了");
 }
 
-- (instancetype)init {
-    return [self initWithFrame:[UIScreen mainScreen].bounds];
-}
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    
-    self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5f];
-
-        [self setupUI];
-    }
-    return self;
-}
 
 #pragma mark - UI
 
-- (void)setupUI {
+- (void)setupSubViews {
     [self addSubview:self.backGroudView];
     _backGroudView.userInteractionEnabled = YES;
     [self addSubview:self.closeButton];
@@ -129,14 +116,14 @@
         }
         [self removeFromSuperview];
     }];
-    
+
 }
 
 #pragma mark - Public
 
 - (void)showInView:(UIView *)superView {
     
-    [superView addSubview:self];
+    [super showInView:superView];
     
 
     [self.amountLabel changeFromNumber:0 toNumber:self.toNumber duration:0.5 animationOptions:MLCounterAnimationOptionCurveLinear attributedFormat:^NSAttributedString *(CGFloat currentNumber){
@@ -152,10 +139,10 @@
             NSShadow *shadow = [[NSShadow alloc] init];
             shadow.shadowBlurRadius = 7.0f;
             shadow.shadowOffset = CGSizeMake(0, 4);
-            shadow.shadowColor = MLColor16(0xFF5A17);
+            shadow.shadowColor = [MLColor16(0xFF5A17) colorWithAlphaComponent:0.5];
             [attri addAttributes:@{NSShadowAttributeName:shadow,NSFontAttributeName:[MLPublic createCustomFontWithFontName:@"STHeitiTC-Medium" Size:85.0f]} range:NSMakeRange(1, [numberString length])];
         }
-        [attri addAttributes:@{NSFontAttributeName:[MLPublic createBoldRegulePingFangFontWithSize:14.0f],NSBaselineOffsetAttributeName:@(-10)} range:NSMakeRange([ori length]-1, 1)];
+        [attri addAttributes:@{NSFontAttributeName:[MLPublic createBoldRegulePingFangFontWithSize:14.0f],NSBaselineOffsetAttributeName:@(0)} range:NSMakeRange([ori length]-1, 1)];
 
         return attri;
         
@@ -167,11 +154,6 @@
  
     
 }
-
-- (void)showInKeyWindow {
-    [self showInView:[UIApplication sharedApplication].keyWindow];
-}
-
 
 #pragma private
 
